@@ -66,7 +66,7 @@ header = {
 }
 
 for page in range(1,10):
-    print('page:' + img_urls + '开始')
+    print('page:' + str(page) + '开始')
     cur_url = urls + str(page)
     cur_page = requests.get(cur_url, headers=headers)
     cur_page.encoding = 'utf-8'
@@ -100,15 +100,10 @@ for page in range(1,10):
                 except:
                     break
                     print('error')
-                finally:
-                    print('page:'+index+"  page over")
+
 
 
 #imgsrcs=soup.find_all('img')
-
-
-
-
 
 
 
